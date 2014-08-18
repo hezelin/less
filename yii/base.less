@@ -1,0 +1,134 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*预设值*/
+body{background:url(../images/bg.gif);}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+    margin: 0px;
+    padding: 0px;
+}
+a{text-decoration:none;}
+a:focus {
+     outline:none;
+     -moz-outline:none;
+}
+
+
+.ct(){margin:0 auto;}
+.fl(){float:left;}
+.fr(){float:right;}
+.bkg(@bgc:rgb(66, 139, 202)){background-color:@bgc;}
+.t-ct(){text-align:center;}
+.t-bc(){color:rgb(66, 139, 202);}
+.heiti(@s:12px){font-family:'微软雅黑';font-size:@s;}
+.clear{clear:both;}
+@border-blue:#59BEFB;
+/*灰色小字*/
+.g-text{font-size:12px;color:#555;}
+
+/*透明*/
+.transparent(@x:90,@y:0.9) { 
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=@x)"; /* ie8  */
+    filter:alpha(opacity=@x);    /* ie5-7  */
+    opacity: @y;    /* css standard, currently it works in most modern browsers  */
+} 
+
+/*边框*/
+.border(@rugosity:1px,@style:solid,@color:#ccc){border:@rugosity @style @color;}
+.brd-t(@rugosity:1px,@style:solid,@color:#ccc){border-top:@rugosity @style @color;}
+.brd-b(@rugosity:1px,@style:solid,@color:#ccc){border-bottom:@rugosity @style @color;}
+.brd-l(@rugosity:1px,@style:solid,@color:#ccc){border-left:@rugosity @style @color;}
+.brd-r(@rugosity:1px,@style:solid,@color:#ccc){border-right:@rugosity @style @color;}
+/*背景渐变*/
+.gradient(@color1:#FFF;@color2:#F9F9F9){
+background-image: -moz-linear-gradient(top,@color1, @color2); /* Firefox */
+background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, @color1), color-stop(1, @color2)); /* Saf4+, Chrome */
+}
+
+/*圆角*/
+.border-radius (@a:5px;@b:5px;@c:5px;@d:5px) {
+    border-radius:  @arguments;
+    -moz-border-radius:  @arguments;
+    -webkit-border-radius:  @arguments;
+}
+/*text阴影*/
+.text-shadow(@x: 0, @y: 0, @blur: 4px, @color: #000) {
+	text-shadow:@arguments;
+}
+/*box外阴影*/
+.box-shadow (@x: 0, @y: 1px, @blur: 3px, @color:rgba(0, 0, 0, 0.33)) {
+    box-shadow: @arguments;
+    -moz-box-shadow: @arguments;
+    -webkit-box-shadow: @arguments;
+}
+/*box内阴影*/
+.box-shadow-inset(@x: 0px, @y: 0px, @blur: 10px, @color: #ccc){
+	-moz-box-shadow:@arguments inset;               /* For Firefox3.6+ */
+	-webkit-box-shadow:@arguments inset;            /* For Chrome5+, Safari5+ */
+	box-shadow:@arguments inset;                    /* For Latest Opera */
+}
+/*默认蓝色按钮*/
+.btn {
+		display: inline-block;
+		padding: 6px 12px;
+		margin-bottom: 0px;
+		font-size: 14px;
+		font-weight: normal;
+		line-height: 1.42857;
+		text-align: center;
+		white-space: nowrap;
+		vertical-align: middle;
+		cursor: pointer;
+		background-image: none;
+		border: 1px solid transparent;
+		border-radius: 4px 4px 4px 4px;
+		-moz-user-select: none;
+		color: rgb(255, 255, 255);
+		background-color: rgb(66, 139, 202);
+		border-color: rgb(53, 126, 189);
+	
+}
+.btn:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(50, 118, 177);
+    border-color: rgb(40, 94, 142);
+}
+
+/*白色按钮*/
+.btn-white{
+	color:#444;
+    background-color:#fff;
+	.gradient;
+	border-color:rgb(204, 204, 204);
+	}
+.btn-white:hover{
+    color:#444;
+    background-color: #F6F6F6;
+	.gradient(#fff,#eee);
+    border-color:#ccc;
+}
+.btn-white:active{
+    background-color: #EEE;
+	.box-shadow-inset;
+}
+/*表单控件*/
+.form-control {
+    display: block;
+	width: 100%;
+	height: 34px;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857;
+	color: rgb(85, 85, 85);
+	vertical-align: middle;
+	background-color: rgb(255, 255, 255);
+	background-image: none;
+	border: 1px solid rgb(204, 204, 204);
+	border-radius: 4px 4px 4px 4px;
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+	transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+.form-control:focus {
+    border-color: rgb(102, 175, 233);
+    outline: 0px none;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(102, 175, 233, 0.6);}

@@ -1,0 +1,149 @@
+﻿@charset "utf-8";
+/*	插件自带样式
+*/
+a:link, a:visited {
+    color: #333;
+}
+a:hover {
+    color: @hover-color;
+}
+
+
+
+/*
+ * waterfall
+ */
+.item {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 192px;
+    padding: 15px;
+    line-height: 1.5;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(34, 25, 25, .4);
+    -moz-box-shadow: 0 1px 3px rgba(34, 25, 25, .4);
+    -webkit-box-shadow: 0 1px 3px rgba(34, 25, 25, .4);
+    filter: progid:DXImageTransform.Microsoft.Shadow(color = #adacac, direction = 135, strength = 2);
+}
+.item img {
+    display: block;
+}
+
+.item:hover {
+    box-shadow: 0 1px 5px rgba(34, 25, 25, .8);
+    -moz-box-shadow: 0 1px 5px rgba(34, 25, 25, .8);
+    -webkit-box-shadow: 0 1px 5px rgba(34, 25, 25, .8);
+    filter: progid:DXImageTransform.Microsoft.Shadow(color = #979797, direction = 135, strength = 3);
+}
+
+#trigger {
+	padding: 10px 30px 20px 30px;
+}
+#trigger a { margin-right: 30px;}
+
+/*
+ * page-navigation
+ */
+#page-navigation {
+	text-align: center;
+	padding: 20px 0 50px 0;
+    display: none;
+}
+#page-navigation a {
+	width:32px;
+	height: 32px;
+	line-height: 32px;
+	display: inline-block;
+	border: 1px #e4e4e4 solid;
+	text-decoration: none;
+}
+#page-navigation .page-navigation-prev, #page-navigation .page-navigation-next {
+	display: inline-block;
+	height: 32px;
+	line-height: 32px;
+	width: 80px !important;
+}
+#page-navigation a:hover {
+	border: 1px #c30 solid;
+	background: #c30;
+	color: #fff;
+}
+#page-navigation a:active {
+}
+#page-navigation a.cur {
+	border: 1px #c30 solid;
+	background: #c30;
+	color: #fff;
+}
+#page-navigation span.disabled {
+	color: #ccc;
+	border: 1px #e4e4e4 solid;
+}
+
+html,body{ overflow:hidden;}
+
+@import "common.less";
+#container{ .w(100%); .h(auto); position:relative; overflow:hidden;}
+#waterfall{  .m-t(15px); *margin-top:0px; z-index:99; overflow:hidden;
+
+	dd{ cursor:pointer; .left; .o; width:216px; .h(auto); .m(10px 2px 10px 13px);.p(10px);}
+	.pin-list{ .bg-c(#fff); .box-shadow(0 0 4px #ccc); .w(236px); .p; position:relative; overflow:hidden;
+		.pin-cover{ width:236px; .o; .h(auto);
+			img{ width:236px;}
+			//分享角标
+			.btn-share{  position:absolute; right:0; bottom:0px; .w(40px); .h(24px); .bg-c(@hover-color); .alpha(90); display:none;
+			.icon-share{
+				background:url(/css/images/glyphicons-halflings.png) -114px -66px no-repeat; .h(24px); .w(24px); .left; .m-l(7px);
+			}
+			}
+		}
+		.pin-name{ .p(10px 10px 5px); .l(20px); .size(16px); color:#444; .t-c(left); font-weight:500;}
+		.pin-desc{ .p(0 10px 10px 10px); .l(20px); .size(14px); color:#ccc; .t-c(left);}
+		.pin-sns{ .p(8px 10px); .h-l(24px); .size(14px); .bg-c(#f6f6f6); .b-t(1px solid #efefef);
+			a{.p-r(10px);}
+			em{ color:#999; font-family:Georgia; color:#333; .size(16px); .p-r(4px);}
+		}
+
+	}
+	/*****   pin-list-hover  ***********/
+	.pin-list-hover{ border-bottom:2px solid @color; .box-shadow(0 0 4px #888 );
+		.pin-desc{ color:@color;}
+	}
+	.pin-create{.bg-c(#ddd); border:2px dashed #AFAFAF; .box-shadow-inset; .h(276px); .w(212px); .p(10px);
+		p{ display:block; width:180px; .h-l(34px) ;text-align:center; .m(130px auto);
+			.box-shadow-inset(0 0 33px 0 #bbb); .color;
+		}
+	}
+	.pin-create-hover{ .bg-c( darken(#ddd,5%) ); border:2px dashed darken(#AFAFAF,15%);
+		p{ .box-shadow-inset(0 0 33px 0 #aaa); color:#333;}
+	} 
+	
+	/********  首页增加属性   **********/
+	.pin-pop-sns{ position:absolute; top:-60px; left:18px; width:100%; .m-t(10px);.o; 
+		.btn{ .m-r(20px); .m-l(5px); display: block; width:80px; .o; .left; text-align:left; .alpha(80); *padding:6px 6px; .radius(2px);
+			i{ .w(24px); .h-l(24px); background:url(/css/images/glyphicons-halflings.png) no-repeat; .left; display:inline;.o;}
+			.icon-like{ background-position:-90px -140px;}
+			.icon-collect{ background-position:-90px 4px;}
+			&:hover{ .alpha(100);}
+		}
+		
+	}
+	.pin-by{ .h-l(30px);.p(10px); .size(14px); .bg-c(#f6f6f6); .b-t(1px solid #efefef);
+		a{ display:block; .w(100%); .h(100%); cursor:pointer;
+			img{ .w(30px); .h(30px);  .left; .o; .m-r(10px);}
+			span{ .h-l(15px); .left; .o; .w(170px); .size(12px); text-align:left;}
+		}
+	}
+	/***********  pin 修改 ,删除 按钮*************/
+	.pin-pop-trash{
+		position:absolute; top:0; right:0; width:48px; .o; .h(24px); z-index:150;
+		a{ display: block; .h(24px); width:24px; .o; .left; background:url(/css/images/pin-pen-trash.png?4) #eee no-repeat; 
+		}
+		.pin-alter{ }
+		.pin-trash{ background-position:-30px 0;}
+		a:hover{ background-position:0 -24px;}
+		.pin-trash:hover{  background-position:-30px -24px;}
+	}
+}
+	

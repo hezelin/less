@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+@import "../../common.less";
+
+@head-color:#333;
+@nav-color:darken(#333,10%);
+
+/* CSS Document */
+body { background-image:none; background:#fff;}
+#first{ margin-bottom:1px;}
+#head{ .w(100%); .h(150px); text-align:center; .bg-c(@head-color);
+	.shop-name{ .l(110px); .size(40px);  color:@white; font-weight:600; .o; .left; .w(100%);}
+}
+
+#nav{ width:100%; height:40px; .bg-c(@nav-color); line-height:40px; .o; .left;
+	ul {
+		 li{ .o; .left;  .w(120px); text-align:center; cursor:pointer;
+			a{ color:#fff;  display:block;
+			&:hover{ .bg-c( darken(@nav-color,5%) );}
+			}
+		}
+		li.active{ .bg-c( darken(@nav-color,5%) ); .w(118px); .b-l(1px solid darken(@nav-color,8%) );
+			.b-r(1px solid darken(@nav-color,8%) );
+		}
+	}
+
+}

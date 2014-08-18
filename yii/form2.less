@@ -1,0 +1,32 @@
+﻿@charset "utf-8";
+
+@import "common.less";
+
+.white-popup-block{ .h(auto); .o; color:#333; position:relative;
+	h3{ font-weight:400; .size(20px); .h-l(40px);}
+	.row{ .w(100%); .left; .o; .l(34px); .m(10px 0); color:#666; .h(auto);
+		label{ .w(80px); .o; .left;
+			.required{ color:red;}
+		}
+		input{ .w(370px); .o; .left; border:1px solid #ccc; .p(0 10px); .h-l(32px); .radius; color:#666;}
+		textarea{ .w(370px); .o; .left; border:1px solid #ccc; .p(10px); .l(24px); .radius; color:#666; .h(100px); .m-b(2px);}
+		select{ .w(390px); .o; .left; border:1px solid #ccc; .p(0 10px); .h-l(32px); .radius; color:#666;}
+		.errorMessage{ .w(150px); .m-l(80px); .o; .left; color:red; .l(34px);}
+		.save-btn{ .w(120px); float:right; cursor:pointer; .m-r(50px);}
+	}
+	.error{ 
+		label{ color:red;}
+		input,textarea,select{ border-color: #888 ; .bg-c( lighten(red,40%));}
+	}
+	.row-wrap-left{ .w(480px); .left; .o;  }
+	.row-wrap-right{ .w(236px); .p(0 0 0 10px); .left; .o; position:relative;
+		.errorMessage{ .m;}
+	}
+	.error #hs-cover{ .b(1px solid red);}
+}
+.mfp-wid-600{ .w(600px);
+	.row{
+		input , textarea{ .w(470px);　}
+		select{ .w(490px); }
+	}
+}

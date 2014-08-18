@@ -1,0 +1,175 @@
+/* CSS Document */
+
+@import 'common.less';
+
+body{ background:url(images/slash-bg.jpg) repeat #ccc;}
+/*header2*/
+#header2{.h(65px); .w(100%); .box-shadow(0 1px 3px rgba(0, 0, 0, 0.33) );.bg-c(@color);
+	.wrapper{width:1000px; .m(0 auto);
+			#demain{ display:block;　.left; width:160px; .h-l(65px); .m-l(10px); .size(28px);
+				 color:#fff; cursor:pointer; text-shadow:0 0 10px #59BEFB;
+				 &:hover { text-shadow:0 0 10px #DBF3F4; }
+			}
+			#nav{.left; width:520px; height:50px; .m(7px 0 0 50px);
+				  a{display:block; width:70px; .radius(5px);.h-l(50px);color:#fff;	.size(16px); .left; .t-c; .m-l(10px);
+					text-shadow:1px 1px 5px #0FF;
+					 &:hover{color:#fff; .box-shadow-inset(0 0 10px #59BEFB); }
+				  }
+				  a.active{ .bg-c(@hover-color);color:#fff;}
+				
+			};
+						  
+			.search{width:226px; .left; margin-top:17px; position:relative; z-index:996;
+				.search-input{ height:36px; width:226px;
+					 #search-text{ .o; .left; width:126px; .h-l(34px); font-size:14px; .radius(5px 0 0 5px); .p(0 10px); }
+					 #condition{  .o; .left;
+						  .icon-menu{ .h-l(14px); .w(14px); background:url(images/glyphicons-halflings.png) -336px -48px no-repeat; .o; .left; }
+					 }
+					 #go .icon-search{ background:url(images/glyphicons-halflings-white.png) no-repeat -48px 0; .h-l(14px); .w(14px); .o; .left; }
+					 button{ .o; .left; .m(0 0 0 -2px); height:36px; width:40px; .radius(0); *margin-top:-4px;}
+					 #go{.radius(0 5px 5px 0);}
+					}
+				};
+					 
+				.search-list{ position:absolute;  z-index:997; width:182px; background:#fff;.b(1px solid #ccc); .b-t;
+					.radius(0 0 5px 5px); display:none;
+						li{width:162px; padding:10px; .size(12px); color:#555; .t-c(left);
+							&:hover{background:#EEE;cursor:pointer;}
+						}
+				};	 
+	
+	}
+}
+	
+	
+/*默认蓝色按钮*/
+.btn {
+		display: inline-block;
+		padding: 6px 12px;
+		font-size: 14px;
+		font-weight: normal;
+		line-height: 1.42857;
+		text-align: center;
+		white-space: nowrap;
+		vertical-align: middle;
+		cursor: pointer;
+		background-image: none;
+		border: 1px solid transparent;
+		border-radius: 4px 4px 4px 4px;
+		-moz-user-select: none;
+		color: rgb(255, 255, 255);
+		background-color: rgb(66, 139, 202);
+		border-color: rgb(53, 126, 189);
+	
+}
+.btn:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(50, 118, 177);
+    border-color: rgb(40, 94, 142);
+}
+
+/*白色按钮*/
+.btn-white{
+	color:#444;
+    background-color:#fff;
+	.linear(#ffffff,#f9f9f9);
+	border-color:rgb(204, 204, 204);
+	}
+.btn-white:hover{
+    color:#444;
+    background-color: #F6F6F6;
+	.linear(#fff,#eee);
+    border-color:#ccc;
+}
+/*表单控件*/
+#search-text {
+    display: block;
+	width: 100%;
+	height: 34px;
+	font-size: 14px;
+	line-height: 1.42857;
+	color: rgb(85, 85, 85);
+	vertical-align: middle;
+	background-color: rgb(255, 255, 255);
+	background-image: none;
+	border: 1px solid rgb(204, 204, 204);
+	
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+	transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+#search-text:focus {
+    border-color: rgb(102, 175, 233);
+    outline: 0px none;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(102, 175, 233, 0.6);}
+	
+
+/***********   表单 区域 ****************************/
+#container{
+	.w(980px); .bg-c(#fff); .m(30px auto); .o;
+	#register-login-area{ .w(730px); .left; .o;  .bg-c(#fff);  .b-r(1px solid #e9e9e9);
+		.ge-form{ .w(670px); .p(20px 30px);
+			h3{ .size(24px); font-weight:400; .h-l(40px); color:#000;}
+			.row{ .w(100%); .left; .h-l(40px); color:#333; font-weight:100; .m-t(30px);
+				label{ .w(80px); .p-r(15px); .t-c(right); .left;}
+				label.long-box{ .w(120px);}
+				.required span{ color:#f60;}
+				input{ .h-l(34px); .m-t(2px); .w(288px); .p(0 6px); .b(1px solid #eee); .left;
+					&:focus{ .bg-c(#F3F8EC); .b(1px solid #C4DFA1);}
+				}
+				.code{ .w(300px);  .left; .h-l(40px);
+					img{ .left; }
+					a{ .w(90px); display:block; .left; .size(12px); color:@hover-color;
+						&:hover{ color:lighten(@color,20%);}
+					}
+				}
+				input.duan{ .w(70px);}
+				input.check-box{.w(30px); .h-l(30px); .m-l(95px); .size(12px);}
+				.remember{ .left; .w(100px); .m-l(60px); color:@hover-color; .size(14px);
+				&:hover{ color:lighten(@color,20%) }
+				}
+				.errorMessage{ .w( 240px); .left; .p-l(30px); color:#f00;}
+				.save-btn{
+					display: inline-block;
+					font-size: 14px;
+					font-weight: normal;
+					cursor: pointer;
+					background-image: none;
+					border: 1px solid transparent;
+					-moz-user-select: none;
+					color:#fff;
+					background-color: rgb(66, 139, 202);
+					border-color: rgb(53, 126, 189);
+					.w(160px); .h-l(40px); .t-c; .m(10px 0 30px 100px);
+					font-family:"微软雅黑";
+					&:hover{
+						background-color: rgb(50, 118, 177);
+						border-color: rgb(40, 94, 142);
+					}
+				}
+			}
+			.error {
+				input{.bg-c(#FDEDEB); .b(1px solid #F4A79A);}
+			}
+		}
+	}
+	#auth-login{ .w(209px); .left;  .o;  .p(20px);
+		.title{ .w(100%); display:block; .o; .left; font-weight:100; .h-l(40px);
+			.fl{ .size(13px); color:#999; .w(120px); .left; .o;}
+			a{ .w(80px); .t-c; .h-l(30px); background-color: #096; color:#fff; cursor:pointer; display:block; .left;
+				.size(14px); .m-t(5px); 
+			}
+		}
+		.other-title{  display:block; .o; .left; font-weight:100; .h-l(40px); .size(14px); color:#999;
+		}
+		.other-account{ .left;
+			li{ .w(50px); .h(50px); .m-l(15px); .m-t(15px); background:url(images/other-login.png) no-repeat; .left; cursor:pointer;
+				a{ display:block; .w(100%); .h(100%);}
+			}
+			.icon_sina{ background-position:0 -70px; &:hover{ background-position:0 -120px;} }
+			.icon_weibo{background-position:-100px -70px;  &:hover{ background-position:-100px -120px;}}
+			.icon_renren{background-position:-150px -70px;  &:hover{ background-position:-150px -120px;}}
+			.icon_douban{background-position:-200px -70px;  &:hover{ background-position:-200px -120px;}}
+			.icon_qq{background-position:-50px -70px;  &:hover{ background-position:-50px -120px;}}
+		}
+	}
+}

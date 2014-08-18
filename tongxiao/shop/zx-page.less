@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+@import "../common.less";
+
+/* CSS Document */
+#manage-page{ .w(720px); .p(20px);  .o; .left; position:relative;
+	#page-list{
+		span{ .w(100px); .o; .left; .h-l(30px);}
+		dl{ .w(620px); .o; .left; 
+			dt{ .h-l(30px); .p(0 10px); .o; .left; cursor:pointer; background:#4E83FE; color:#fff; .radius(4px);}
+			dd{ .h-l(28px); .bg-c(#eee); color:#111; .p(0 10px); .radius(4px); cursor:pointer; .o; .left; .m(0 15px 10px 0); position:relative;
+				.b(1px solid #ccc);
+				em{ display:none;}
+			}
+			dd.dd-border{ .h-l(28px); .b(1px solid lighten(red,17%)); .p-r(40px);
+				em{ position:absolute; .w(30px); .h-l(30px); text-align:center; cursor:pointer; top:0; right:0; .bg-c( lighten(red,17%));
+				 color:#fff; .size(20px); display:block;  }
+			}
+			dd.page-dd-click{ background:#F7B1FE; .b(1px solid darken(#f7b1fe,10%) );}
+		}
+		#dt-cancle{ .m-l(15px); background:lighten(red,17%); color:#fff;}
+	}
+	#page-add{ .w(720px); .left; position:relative; .m-t(10px); .o;
+		.page-title{ .h(40px); .w(100%); .o; .left;
+			em{ .w(100px); .o; .left; .h-l(40px); text-align:left;
+				i{ color:#f60; font-family:Georgia; .size(18px);}
+			}
+			input{ .w(500px); .h-l(28px); .b(1px solid #ccc); .p(0 10px); .m(5px 0); color:#999;}
+		}
+		#ued{ .w(720px);  .left;  .m(0 0 0 100px);  position:relative; }
+	}
+	
+}
+
+/*  自定义 按钮  tog  */
+#p-save{ .w(100px); .h-l(40px); .m(20px 0 0 100px); .o; .left; .bg-c(#4E83FE); color:@white; text-align:center; cursor:pointer;}

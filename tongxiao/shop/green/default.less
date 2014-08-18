@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+@import "../../common.less";
+
+@head-color:green;
+@nav-color:darken(green,10%);
+
+/***********  过滤搜索 ******************/
+#filter{ margin:10px 0; overflow:hidden; float:left;
+	.list-filter{ border:1px solid #ccc; .m(10px 3px 3px 0); .o; .left; .w(955px); .p(15px 10px);.bg-c(@white); position:relative;  
+	              z-index:80; display:inline; .box-shadow(1px 1px 3px,#ccc); .size(16px);
+		div{ .h-l(30px); .left; width:100%;
+			 em{ .left; .w(90px); text-align:right;}
+		}	
+		a{ display:block;.p(0 10px); .o; .left; color:#333; .m(2px 0 2px 10px); .h-l(30px);
+			&:hover{.b(1px dotted @head-color); .h-l(28px); .p(0 9px); color:@head-color; background:@white;}
+		} 
+		.on { .p(0 10px); color:@white; .bg-c(@head-color); }
+	}
+
+}
+
+/****** 列表区域 *******  #4E8ACA */
+#content{
+	.house-list-wrap{ .w(1000px); .o; .left; .m(3px 0 16px -16px); 
+		.house-list-item{ .box-shadow(1px 1px 3px,#999); .radius(2px);
+			.w(300px); .p(8px); .m(10px 0 8px 16px); .o; .left; .bg-c(@white); display:inline;
+			
+			.h-lmg{ .w(300px); .h-l(200px); .o; .left;}
+			a{ color:@head-color; .size(16px); .h(40px); cursor:pointer;}
+			a.item-pic{ .w(300px); .h-l(200px); vertical-align:middle; text-align:center;  display: table-cell; *display: block;
+			         *font-size:175px; *font-family:Arial;}
+			.item-info{ position:relative; .w(100%); .h-l(40px);.o; .left; .m-t(5px);}
+			.item-name{ width:250px; .o; .left; white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis; }
+			.item-price{ color:#f60; .h(40px); .p-l(2px);.bg-c(#fff); position:absolute; top:0; right:0; text-align:right;}
+			a:hover span{ text-decoration:underline;}
+		}
+	}
+
+}
+#content-bg{ .h-l(300px); .w(100%); text-align:center; vertical-align:middle;.o; .left; color:lighten(@black,40%);}
+
+
+
+/**************  paginate.php **********************/
+
+#paginate-wrap{ .w(100%); .h(53px); .m(10px 0); position:relative;.o; .left; text-align:center;
+	.paginate{ .h(40px); .p; .o; 
+		li{ list-style:none; .w(32px);  text-align:30px; .h-l(32px); .m(4px); .left; 
+		    background:#f6f6f6; cursor:pointer;
+			a{ display:block; .w(30px); .h-l(30px); .o; .left; border:1px solid #ccc;
+				&:hover{ color:@head-color; border:1px dashed @head-color;}
+			}
+		}
+		.p-prev,.p-next{ .w(80px); text-align:center;.o; .left;
+			a{ .w(78px);}
+		}
+		.p-current{.bg-c(@head-color); border-color:@head-color; cursor:text; color:@white;}
+	}
+}

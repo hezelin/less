@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+@import "../common.less";
+
+/* CSS Document */
+body{ background:none;}
+#first{ .m; .bg-c(#333333); .b; .h-l(30px); color:#fff; .b-b(1px solid #999);}
+#foot{ .bg-c(#555555);.m-t(20px); .b; color:#888888;}
+
+#zx-head{ .h(80px); .bg-c(#4E83FE); .w(100%); .left; .o;
+	span{ color:@white; .h-l(40px); .m-t(22px); .left; .size(24px); .w(100%);  }
+}
+
+#zx{ .h(400px); .w(980px); .m(20px 0); .left; .bg-c(#EBFAFF);}
+
+#zx-l{ .w(160px); text-align:center; .o; .left; .m(20px 20px 5px 0); .bg-c(#EBFAFF);  position:relative;
+	dl{ .o;.h(300px);.p(40px 0); .bg-c(#EBFAFF);
+		dd{ .w(100%); .left;  .h-l(34px); cursor:pointer;
+			a{ display:block; color:#333;}
+		}
+		dd.zx-dd-hover{background:#eee;} 
+		dd.zx-dd-click, dd.zx-dd-click a{ .bg-c(#4E83FE); color:#fff;}
+	}
+ 
+}
+
+#zx-r{ .w(760px); .bg-c(#EBFAFF); .o; .left; .m(20px 0); .p(20px); 
+}

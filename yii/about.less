@@ -1,0 +1,43 @@
+/* CSS Document */
+
+@import 'common.less';
+
+body{ background:url(images/slash-bg.jpg) repeat #ccc;}
+/*首页*/
+#content{ .bg-c( lighten(@color,10%) ); .p(0 10px); .h(185px);
+	.name{
+	h1{ color:#fff; .size(40px); .h-l(60px);}
+	h3{ color:#666; .h-l(20px); .size(22px); .m-t(30px); font-weight:100;}	
+	}
+	.suggest{
+		a{ .w(190px); .p(12px 10px); .h(35px);  .m-t(40px); .radius(5px); display:block;
+			.bg-c( #f6f6f6); .t-c; .box-shadow(1px 1px 1px #ccc);
+			.title{ .h-l(18px); display:block; }
+			&:hover{ .bg-c(#fff); }
+		}
+	}
+	
+}
+.g-main{
+	.w(730px); .left; .o;
+}
+.g-sub{
+	.w(210px); .left; .o; .m-l(30px);
+}
+.t-indent{ text-indent:2em; }
+.t-box{
+	.radius(5px); .bg-c(#fff); .w(680px); .p(25px); .m(40px 0);
+	.title{ .size(20px);}
+	.text{ .m-t(10px); }
+}
+.s-box{
+	.m(10px 0); .w(210px); 
+	ul{
+		li{ .h-l(30px); float:left; color:#333; .w(100%); .o;
+		}
+	}
+}
+.m-top{ .m-t(30px);}
+.m-top-100{ .m-t(100px);}
+
+.head{ .w(100%); .b-b(1px solid #999); .h-l(40px); .size(20px); font-weight:100;}

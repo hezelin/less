@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+@import "common.less";
+
+
+#main{
+		.bg-c( lighten(@color,10%) ); width:100%; .h(300px);  .o; .left;
+}
+
+#content {
+	.more{ .w(20px); .h-l(20px); color:@head-text-color ; font-size:20px; cursor:pointer; position:absolute; top:0; right:0; font-weight:600; .bg-c( lighten(@head-color,10%) ); text-align:center;
+		}
+	 #new{ .o; .left; .m(20px 0); width:100%; .bg-c(@head-text-color); position:relative;
+		.title{
+			.bg-c(@head-color); .w(200px); .h-l(120px); color:@head-text-color; text-align:center; .size(30px); .o; .left;
+		}
+		ul{ .w(750px); .p(0 15px); .o; .left;
+			li{
+				.w(240px); .p-l(10px); .h-l(40px); .o; .left; 
+				
+				a{ display:block; cursor:pointer; color:@nav-color; .w(240px); .h(40px);
+					span{ .w(120px); .o; .left;}
+					.price{ color:darken(@head-color,10%); .w(100px); text-align:right;
+						 em{ .p-r(5px); font-family:Georgia; }
+					}
+					&:hover{ color:@head-color; text-decoration:underline;
+						span{ color:@head-color; text-decoration:underline; }
+					}
+				}
+			}
+		}
+	}
+	
+	#sq{ .m(0 20px 20px 0); .w(600px); .h(320px); .bg-c(@head-text-color); position:relative; .o; .left;
+		dl{ .w(500px); .p(0 20px); .o; .left; .h(320px);
+			dt{ .h-l(40px); .w(500px); .o; .left; .size(16px); .color(@head-color);
+				em{ .p-r(5px); font-family:Georgia; .size(18px);}
+			}
+			dd{ line-height:24px; height:auto; .w(500px); .o; .left; .size(14px); text-indent:2em; color: lighten(@nav-color,10%);}
+		}
+		.title{
+			.bg-c(@head-color); .w(30px);.p(80px 15px); .h(320px); color:@head-text-color; text-align:center; .size(30px); .o; .left;
+			line-height:40px;
+		}
+	}
+	#else{ .o; .left; .w(360px); .h(320px);
+		.title{.bg-c(@head-color); .w(30px);.p(12px 10px); .h(130px); color:@head-text-color; text-align:center; .size(24px); .o; .left; line-height:30px;}
+		
+		.daili{ .h(150px); .w(360px);.o; .left; .bg-c(@head-text-color); .m-b(20px); position:relative;
+			ul { .p-l(20px); .w(290px); .o; .left; 
+				li{ .o; .left; .w(290px); .h-l(35px); color:@head-color;
+					em{ color:@nav-color; .p-r(10px);}
+				}
+			}
+		}
+		span{ .bg-c(@head-text-color); }
+	}
+}

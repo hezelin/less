@@ -1,0 +1,38 @@
+/* CSS Document */
+@import 'common.less';
+
+#comments{ .w(100%); position:relative; overflow:hidden; float:left; .m-t(-10px); font-family:Arial, Helvetica, sans-serif;
+	.summary{
+		h3{ .size(16px); font-weight:400; color:@color;}
+		.start-end{ .p-l(20px);}
+	}
+	.comment-list{  .m(5px 0); 
+		.comment-u-pic{ .w(34px); .h(34px); float:left; overflow:hidden; border:1px solid #ccc; .m(5px); .bg-c(#fff); display:block;
+			img{ .w(30px); .h(30px);.m(2px);}
+		}
+		.comment-box{
+			h2{ .size(12px); .h-l(24px);  color:#999; .p-l(5px);
+				span{ .p-l(10px); font-weight:100; .size(11px);}
+			}
+			p{ .l(20px); color: #00004f; .size(14px); height:auto; .p-l(5px); .w(580px); min-height:26px; max-height:100px;
+				 display:block; float:left;
+			}
+		}
+	}
+	.pager{ overflow:hidden; float:left; .m(5px 0); .h(30px); .w(100%);
+	}
+}
+
+
+/* **********   分页样式    ********************/
+ul.yiiPager{ .size(12px); .l(100%); display:inline;
+	li{ display:inline; }
+	a:link, a:visited{ .b(solid 1px #666); font-weight:bold; color:#fff; padding:2px 8px; text-decoration:none; .bg-c(#666);}
+	a:hover{ border:solid 1px lighten(#A6D25F,10%); color:#4b4b4b; .bg-c( lighten(#A6D25F,10%) );} 
+	.page a{ font-weight:normal; }
+	.selected a{ background:#A6D25F; color:#4b4b4b; font-weight:bold; .b(1px solid #A6D25F);}
+	.hidden a{ display:none; }
+	.first,.last { display:none;
+		a { .p(2px 10px); }
+	}
+}

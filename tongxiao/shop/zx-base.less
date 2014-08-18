@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+@import "../common.less";
+
+/* CSS Document */
+#base-set{ .w(720px); .p(20px); .o; .left; position:relative;
+	#base-hide{ .w(720px); .o; .left; position:relative;}
+	.ziti{ border:1px solid #eee; .p(0 5px); .w(80px); .h-l(28px);}
+	ul{ .o; .w(100%); .left;
+		li{ .h-l(32px); .m(2px); .w(100%); .o; .left;
+			em{ .w(100px); .o; .left;}
+			em.duan{ .w(80px);}
+			.hd-bg,.bd-bg{ .w(80px);.h-l(80px); .m-r(10px); .o; .left; .bg-c(#fff); position:relative;
+				span{ .h-l(80px); text-align:center; .w(80px);  .alpha(50); .bg-c(#fff); vertical-align:middle;
+					position:absolute; top:0; left:0;
+				}
+			}
+			.but{ .w(160px); .o; .left; .h-l(30px); .size(14px); .m-b(10px);
+				.bd-alter,.hd-alter{ .bg-c(@white); .w(75px); .m-r(15px); .o; .left; .h-l(28px); .b(1px solid #eee); 
+				.radius(4px); text-align:center; .linear( lighten(#eee,10%), lighten(#eee,5%) ); }
+			}
+			.tips{ .h(40px); .l(20px); color:#999; .size(14px);}
+		}
+		li.duan{ .w(350px);
+			dl{ .o; .left; .w(265px); .h(30px); .p-l(5px); .size(14px);  cursor:pointer;
+				dd{ .h-l(24px); .o; .left; .w(63px); text-align:center; .b(1px solid #ccc); .m-l(-1px);}
+				dd.dd-hover{ color:#f60;}
+				dd.dd-click{ .bg-c( lighten(#4e83fe,5%)); color:#fff; .b(1px solid darken(#4e83fe,10%) ); .b-r(2px solid darken(#4e83fe,10%) );}
+			}
+		}
+		li.hei{ .h(90px);}
+	}
+	ul.add-set{ .m(10px 0); .p(10px 0);.b-t(1px dashed #ccc); .b-b(1px dashed #ccc); color:#666;}
+	ul.no-border-top{ .b-t();}
+}
+/*  自定义 按钮  tog  */
+#save{ .w(100px); .h-l(40px); .m-l(120px); .o; .left; .bg-c(#4E83FE); color:@white; text-align:center; cursor:pointer;}
+#top{ .w(150px); .h-l(40px); .m-l(20px); .o; .left; .bg-c( #eee ); color:#333333; text-align:center; cursor:pointer;}

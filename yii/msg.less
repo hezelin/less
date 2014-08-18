@@ -1,0 +1,34 @@
+/* CSS Document */
+
+@import 'common.less';
+
+
+#container{ .w(980px); margin:0 auto; .bg-c(#fff); .o;
+		#msg-pop{ .w(940px); left:-300px; z-index:99999; .p(20px); .o; .left;
+			
+				dt,h4{ .bg-c(#EDF0F7); .h-l(36px); color:#647892; .p(0 20px); .left; .o; .w(900px);}
+				dd{ .h-l(45px); .w(900px); .p(0 20px); .left; .o; .b-t(1px solid #e2e2e2);  position:relative;
+					.msg-name{ .w(150px); border-right:1px dotted #C8C8C8; .left; font-weight:600; .size(14px); color:#353034;}
+					.msg-body{ .w(700px); .left; .size(14px); .p-l(30px); display:block; .o; color:#4C4C4C;
+						a{ float:none; display:inline; .h-l(45px); .p-r(5px); border:none; color:#3f3f3f;.p-l(10px);
+							img{ .w(30px); .h(30px); .m-t(7px); .left; .m-r(5px); .radius(2px);}
+							&:hover{ color:#f60; text-decoration:underline;}
+						}
+						.msg-time{ .size(12px); .p-l(15px); color:#999;}
+						
+					}
+					.icon-msg-delete{ position:absolute; .w(24px); .h-l(24px);  right:10px; top:10px; display:block;
+						background:url(images/glyphicons-halflings.png) -451px 5px  no-repeat; cursor:pointer;}
+				}
+				h4 { position:relative;
+					.msg-set-read { .w(120px); .t-c; position:absolute; right:0; top:0; font-weight:100;}
+				}
+				dd:hover{ .bg-c(#F2F2F2);}
+				.msg-end{ .b-t(1px solid #e2e2e2); .t-c;
+					 a{ color:#647892; &:hover{ text-decoration:underline; } }
+				}
+			}
+			#msg-loading{ .w(100%); .h-l(100px); .t-c; vertical-align:middle; .left; .o;
+				img{ .m-t(40px); }
+			}			
+}

@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+@import "common.less";
+
+#list{ 
+	#list-wrap{ .w(1100px); .o; .left; .m(0  0 20px -38px);
+		li{ .w(280px); .o; .left; .m(30px 0 4px 38px); .bg-c(@head-text-color); .p(10px);
+		
+			.radius(2px); .box-shadow(1px 2px 2px,#ccc);
+			
+			.name{ .w(280px); .h-l(120px); .bg-c(@head-color); text-align:center; .size(24px); .color(@head-text-color); .left;}
+			
+			.price { .h-l(50px); border-bottom:1px solid #ccc; .w(100%); .left; position:relative;
+				a{ display:block; .w(100%); .h-l(50px); color:@head-color; .size(18px);
+					i{ font-family:Georgia; white-space:2px; font-weight:600; }
+					em{ position:absolute; top:0; right:0; .w(100px); text-align:right; color: lighten(@nav-color,30%);}
+					&:hover{ text-decoration:underline;
+						em{ color:@head-color; text-decoration:underline;}
+					}
+				}
+			}
+			
+			.intro{
+				.w(100%); .h(60px); line-height:30px; .left; color: lighten(@nav-color,30%); .p(5px 0);
+			}
+		}
+	}
+}

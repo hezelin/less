@@ -1,0 +1,49 @@
+/* CSS Document */
+@import 'common.less';
+
+#content{ .w(1000px); .m(20px auto);  position:relative;.bg-c(#f8f8f8);
+
+	#left-layout{ .w(825px);
+		#interest-wrap{ .p(15px); .w(795px); .bg-c(#fff); .o; .left;  
+			h3{ .size(14px); font-weight:500; .w(100%); .h-l(30px); .m-t(10px); float:left;}
+			.menu-box{ .w(820px); float:left; .o; .left; .m(-15px 0 15px -15px);
+				li{ .m(15px 0 0 15px); .o; .left; .w(120px); .h-l(120px); .t-c; .bg-c(#1CC7A5); position: relative;
+					cursor:pointer; color:#fff;
+					
+					.c-c{ .t-c; }
+					.l-b{ .size(14px); .h-l(30px); position:absolute; bottom:0; left:10px; .t-c(left); }
+					//icon 打钩图标
+					i{ position:absolute; .w(24px); .h-l(24px); .radius(24px); bottom:10px; right:10px; display:none;
+						background:url(images/glyphicons-halflings-white.png) -284px 6px no-repeat @color;
+					}
+				}
+				li.item-select i{ display:block;}
+				.box-1-1{ .w(120px); .h-l(120px); }
+				.box-2-1{ .w(255px); .h-l(120px); }
+				.box-1-2{ .w(120px); .h-l(255px); }
+				.box-2-2{ .w(255px); .h-l(255px); }
+			}
+		}
+	}
+	
+	.box{  .o; .left;  .radius(2px); .box-shadow(0 0 4px #ccc); }
+	 
+	#right-layout{  .w(160px);   .o; .left;  .b-l(#ededef); .h(100%); .p-l(10px);
+		.title1{ font-size:16px; font-weight:500; line-height:30px; .w(100%); float:left; .o; .m-t(50px);}
+		.title2{  font-size:14px; font-weight:500; line-height:30px; .w(100%); float:left; .o; color:#666;}
+		#item-list{ .b(1px solid #eee); .bg-c(#fff); .m(15px 15px 15px 10px); .w(130px); .left; .o; .b-b;
+			dd{ .h-l(40px); .w(100%); .left;  .b-b(1px solid #eee); .p(0 15px); display:none;
+				i{ background:url(images/glyphicons-halflings.png) -288px 6px no-repeat;
+					.w(24px); .h(24px); float:left; .m-t(8px);
+				}
+			}
+		}
+		#sure-btn{ text-shadow:-1px -1px 0px #779e00;
+			.h-l(40px); .t-c;.w(130px);.m-t(15px); color:#fff; .b; .size(16px); .bg-c(@color);
+			.left; cursor:pointer; .m-l(10px);
+			&:hover{ .bg-c( lighten(@color,10%)); }
+		}
+	}
+}
+
+

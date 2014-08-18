@@ -1,0 +1,169 @@
+﻿@charset "utf-8";
+
+@import "common.less";
+
+#psn-ifma{.w(800px); .h(165px); .p(15px 15px 0); .m(10px auto); .bg-c(#FFF); text-align:left;
+			.radius(5px); .box-shadow(@shadow-value); z-index:900; position:relative;
+			
+		.psn-ifma-l{ .w(150px); .h(150px);.left; .o;
+				img{ width:100%; .h(100%);}
+		}
+		.psn-ifma-c{.left; .m-l(15px); .h(150px); .b-r(1px solid #ccc);  .color; width:360px; position:relative;
+			.introduce{ .size(12px); .m-t(5px);
+				.author{ .size(24px); font-weight:bold; .h-l(20px); color:#666;}
+				.status{ .m-l(20px); .size(16px); color:#666;}
+			}
+			.summary{display:block; height:70px; .l(23px); .w(320px);  margin-top:10px; text-indent:2em; color:#999; .size(16px);}
+			.sns-info{ height:32px; margin-top:10px; .size(12px); .o; .left;
+				a{ width:80px; .h-l(30px); .left; .m-r(15px); cursor:pointer; position:relative; display:block;
+				   .b(1px solid #ccc); text-align:center; .radius(5px);  .linear(#FFF,#F9F9F9);
+				   span{ .w(40px); .left; .o;}
+					em{ color:@color; .size(16px); .h-l(30px);  text-align:left; .w(40px); .o; .left;}
+				}
+			}
+		}
+		.psn-ifma-r{ .left; width:250px; height:150px; .color; .p(0 0 0 20px);
+			h3{.color; .size(16px); .h-l(25px); .h(30px); font-weight:100;}
+		}
+}
+		
+		
+#userinfobar{ width:1020px; height:45px; .m(0 auto); background:#fff; .radius(5px); position:relative;
+			.linear(#FFF,#F9F9F9); .box-shadow(0px 1px 3px #ccc); .o; .size(12px); .b-b(1px solid #ccc);
+		.userinfobar-l{ height:45px; width:45%; .left; position:relative;
+			a{ display:block; .left; width:80px; .h-l(45px); .b-r(1px solid #ccc); .color; text-align:center; cursor:pointer;}
+		}
+		.follow-wrap{ .w(100px); .h-l(45px); .left; .o;  
+				#follow-board{  .h-l(33px); .radius(4px);; .m(5px 0); border: 1px solid transparent; border-color: rgb(53, 126, 189);
+				.bg-c( rgb(66, 139, 202) ); color:#fff; display:block; .t-c; vertical-align:middle; .left; .w(96px); cursor:pointer;
+				img{ .left; .m(6px 0 0 40px);}
+				&:hover{ background-color: rgb(50, 118, 177);  border-color: rgb(40, 94, 142);}
+				}
+			}
+			
+		.userinfobar-r{ height:45px; width:162px;  position:absolute; right:0; top:0;
+			a{ display:block;.left; width:80px; .h-l(45px); .b-l(1px solid #ccc); .color; text-align:center;  cursor:pointer;}
+		}
+	
+		em{ .p-r(4px); color:@color;}
+		a:hover,a:active,a:focus{ .box-shadow-inset(0 0 10px #ccc); color:@color; }
+}
+
+		
+#content{ width:100%; .o; .left;
+	.auto-width{ position:relative;}
+	.board-wrap{ .m-l(-13px); .left; .o;
+	
+		dd{ .radius; cursor:pointer; .left; .o; width:216px;height:280px; .m(10px 2px 10px 13px);.p(10px);}
+		.board-create{.bg-c(#ddd); border:2px dashed #AFAFAF; .box-shadow-inset; .h(276px); .w(212px);
+			p{ display:block; width:180px; .h-l(34px) ;text-align:center; .m(130px auto);.radius(2px);
+				.box-shadow-inset(0 0 33px 0 #bbb); .color;
+			}
+		}
+		.board-create-hover{ .bg-c( darken(#ddd,5%) ); border:2px dashed darken(#AFAFAF,15%);
+			p{ .box-shadow-inset(0 0 33px 0 #aaa); color:#333;}
+		}
+		.board-list{ .bg-c(#fff); *border:1px solid #BBB; .box-shadow; 
+			.board-name{ .color; .size(15px); .l(25px); .h(30px); .o; .w(100%);}
+			.board-cover{ width:216px; height:146px; .radius(3px); .o;  position:relative; .box-shadow-inset(0 0 10px #ccc);
+				img{ width:100%; .h(100%); .radius(3px);}
+				span{ position:absolute; bottom:2px; right:2px; max-width:100px; .h-l(26px); .radius(4px); .bg-c(#000);
+					.alpha(70); color:#fff; .size(14px); .p(0 5px);
+					i{ .size(16px); .p-r(5px);} 
+				}
+			}
+			.board-thumbs{width:100%; text-align:center; 
+				li{ margin:5px 2px; *margin:5px 1px; width:50px; height:50px; .o; .left; .radius(3px); 
+					.box-shadow-inset(0 0 10px #ccc);
+					img{width:100%; .h(100%); .radius(3px);}
+				}
+			}
+			.btn-white{width:188px; .m-t(5px); .linear(#ffffff,#f0f0f0);
+				&:hover{ .linear(#ffffff,#dcdcdc); background-color: #eeeeee;}
+			}
+		}
+	}
+	
+	.secret-wrap{ width:100%;  .bg-c(#e0e0e0);   .o; .left; .m-t(20px); .b-t(1px solid #999);
+		.board-wrap dt,.circle-wrap dt{ .h-l(60px); .size(16px);
+			i{ .w(24px); .h(24px); .m-t(4px);}
+		}
+	}
+	
+	/**********　　圈子样式   ****************/
+	
+	.circle-wrap{ .m-l(-13px); .left; .o;
+	
+		dd{ .radius; cursor:pointer; .left; .o; width:216px;height:260px; .m(10px 2px 10px 13px);.p(10px);}
+		.circle-create{.bg-c(#ddd); border:2px dashed #AFAFAF; .box-shadow-inset; .h(256px); .w(212px);
+			p{ display:block; width:180px; .h-l(34px) ;text-align:center; .m(130px auto);.radius(2px);
+				.box-shadow-inset(0 0 33px 0 #bbb); .color;
+			}
+		}
+		.circle-create-hover{ .bg-c( darken(#ddd,5%) ); border:2px dashed darken(#AFAFAF,15%);
+			p{ .box-shadow-inset(0 0 33px 0 #aaa); color:#333;}
+		}
+		.circle-list{ .bg-c(#fff); *border:1px solid #BBB; .box-shadow; 
+			.circle-name{ .color; .size(15px); .l(25px); .h(30px); .o; .w(100%);}
+			.circle-cover{ width:216px; height:146px; .radius(3px); .o;  position:relative; .box-shadow-inset(0 0 10px #ccc);
+				img{ width:100%; .h(100%); .radius(3px);}
+			}
+			.circle-count{ .h-l(30px); .p-t(10px);
+				b{ .w(70px); .left; color:#333; font-weight:500;}
+				i{ background:url(/css/images/glyphicons-halflings.png) no-repeat; .w(14px); .h(14px); .o; .left; .m(8px 5px 0 8px);}
+				.icon-board{ background-position: -216px 0px; }
+				.icon-topic{ background-position: -120px -72px;}
+				.icon-member{ background-position: -168px 0px;}
+			}
+			
+			.btn-white{width:188px; .m-t(5px); .linear(#ffffff,#f0f0f0);
+				&:hover{ .linear(#ffffff,#dcdcdc); background-color: #eeeeee;}
+			}
+			.circle-roles{ .h-l(30px); .bg-c(#f1f1f1); .p-l(15px); .m-t(10px); cursor:text;}
+		}
+	}
+	
+}
+
+/************  my.php  增加属性 ************************/
+.pop-button{ position:relative;	
+	.pop-i{  position:absolute; top:0; left:0; .w(100%); .h(100%); .bg-c(#fff); .alpha(20);}
+	.pop-em{ position:absolute; top:60px; left:70px; .p(0 10px); .h-l(30px); .radius; cursor:pointer; .button; 
+	}
+}
+
+#psn-ifma .pop-button .pop-em{ left:40px; top:60px;}
+
+#edite{ position:absolute; bottom:10px; right:20px; .w(16px); .h-l(16px); background:url(images/sprites.png?base64) no-repeat;}
+
+/***************/
+
+.button{
+  -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.5), 0px 1px 2px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.5), 0px 1px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.5), 0px 1px 2px rgba(0, 0, 0, 0.15);
+  .bg-c(#eee);
+  
+  .linear(#fbfbfb,#e1e1e1);
+  
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  border: 1px solid #d4d4d4;
+  font-weight: 300;
+  font-size: 14px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  color: #666666;
+  text-shadow: 0 1px 1px white;
+  margin: 0;
+  text-decoration: none;
+  text-align: center;
+}
+
+.button:hover {
+	 .linear(#ffffff,#dcdcdc);
+  background-color: #eeeeee;
+}

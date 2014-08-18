@@ -1,0 +1,23 @@
+[class*="icon-"] {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background-image: url(sprites.svg);
+	background-repeat: no-repeat;
+}
+.icon-pencil {
+	background-position: 0 0;
+	width: 30px;
+}
+.icon-alarm {
+	background-position: -60px 0;
+	width: 30px;
+}
+.icon-close {
+	background-position: -120px 0;
+	width: 30px;
+}
+.icon-list {
+	background-position: -180px 0;
+	width: 30px;
+}

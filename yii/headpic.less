@@ -1,0 +1,70 @@
+﻿@charset "utf-8";
+
+@import "common.less";
+
+
+/***************** 头像 操作 ****************/
+#head-pic{ .m(10px auto); .w(980px);}
+#head-pic .label{ width:100px;  padding-right:5px; float:left; font-size:16px;}
+#head-pic ul li{ line-height:30px; height:30px; width:100%; float:left; margin:15px 0;}
+#head-pic li.head-edit{ width:700px; margin:0;}
+#head-pic h3{ width:100%; height:30px; line-height:30px; display:block; float:left; overflow:hidden; font-weight:100; font-size:16px; margin-bottom:10px;}
+
+#head-pic li.head-prev{ width:280px; margin:0;}
+#head-pic li.head-prev span{ width:280px; height:60px; line-height:60px; float:left; display:block; color:#666;}
+
+#head-pic li.head-prev  #save{ width:120px; height:40px; margin-right:20px; margin-top:40px; float:left;
+background: #4E83FE; border: 1px solid #4E83FE; color: #FFFFFF; cursor: pointer; line-height:40px; text-align:center;
+font-size: 18px;}
+
+.skip-save{ width:60px; height:40px; line-height:40px; text-align:center; cursor:pointer; overflow:hidden; float:left; margin-top:40px; font-size:18px; background:#94846E;}
+.skip-save a{ color:#fff;}
+
+#head-pic li.head-edit{ height:auto; overflow:visible; .m-b(50px);}
+#head-pic li #head-ori{ position:relative; overflow:hidden; float:left;}
+#head-pic #head-ori{ width:600px;
+ padding: 5px;
+  border: 1px #ccc solid;
+  background-color: white;
+  -webkit-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+  }
+#head-pic #head-ori img{}
+
+/* Apply these styles only when #preview-pane has
+   been placed within the Jcrop widget */
+ #preview-pane {
+  display: block;
+  width:150px;
+  height:150px;
+  overflow:hidden;
+  float:left;
+  padding: 5px;
+  border: 1px #ccc solid;
+  background-color: white;
+
+  -webkit-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* The Javascript code will set the aspect ratio of the crop
+   area based on the size of the thumbnail preview,
+   specified here */
+#preview-pane .preview-container {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+}
+#head-pic .img-wrap{height:400px; line-height:400px; color:#ccc; font-size:18px; text-align:center;}
+ #preview-pane img{ display:none;}
+/**************** 上传 操作 **********************/
+
+#upload{width:100px; text-align:center; margin-right:20px; display:block;  border:1px solid #ccc; float:left; 
+font-size:14px; cursor:pointer; .h-l(28px); color:#333;
+.box-shadow( 1px 1px 3px #eee);
+.radius(2px);
+.linear(#ffffff,#f6f6f6);
+}
+#status{ color:#f60;}

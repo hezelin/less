@@ -1,0 +1,80 @@
+/*
+ *   bootstrap 补充 自定义样式
+ */
+@import "common.less";
+body { .p; padding-top: 70px;}
+//-缩进
+.indent{ text-indent:2em ;}
+//- 修复 ul padding-left:45px 问题
+.p-l-15{ .p-l(15px);}
+.p-r-15{ .p-r(15px);}
+.p-b-15{ .p-b(15px); }
+.p-t-15{ .p-t(15px); }
+.p-15{  .p(15px); }
+
+.p-l-10{ .p-l(10px);}
+.p-r-10{ .p-r(10px);}
+.p-b-10{ .p-b(10px); }
+.p-t-10{ .p-t(10px); }
+.p-10{  .p(10px); }
+
+.p-l-5{ .p-l(5px);}
+.p-r-5{ .p-r(5px);}
+.p-b-5{ .p-b(5px); }
+.p-t-5{ .p-t(5px); }
+.p-5{  .p(5px); }
+
+.m-t-10{ .m-t(10px);}
+.m-b-10{ .m-b(10px);}
+.m-l-10{ .m-l(10px);}
+.m-r-10{ .m-r(10px);}
+.m-10{ .m(10px);}
+
+.m-t-5{ .m-t(5px);}
+.m-b-5{ .m-b(5px);}
+.m-l-5{ .m-l(5px);}
+.m-r-5{ .m-r(5px);}
+.m-5{ .m(5px);}
+
+
+.li-height-30 li{ .h-l(30px);}
+.bg-ccc{background-color:#ccc;}
+.h-40{ .h-l(40px);}
+.size-20{ .size(20px);}
+.cursor{ cursor:pointer;}
+
+.float-right{ float:right;}
+.float-left{ float:left;}
+
+#foot{
+    .bg-c(#eee); .t-c; .h-l(50px); .m-t(30px);
+    p{ .m;}
+    a{ .p(0 10px);}
+}
+
+/************   site *******************/
+	/*   navbar 高度设置 ******/
+	.navbar{ border-radius:0;}
+	.navbar-nav > li > a {padding-top:20px !important; padding-bottom:20px !important;}
+	.navbar-brand{ _padding-bottom:0px !important;} 
+	.navbar,.navbar-brand {min-height:50px !important}
+	/*   navbar 背景颜色 设置 *****/
+	.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus ,
+	.navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus { 
+		background-color:#333 !important;
+		color: #FD4935 !important;
+	}
+	
+	.navbar-text{ margin-top:25px !important;}
+	.nav-tips{ display:block; padding:20px 10px; margin:0; .h-l(36px);}
+	/*   navbar 字体大小 ******/
+	//.navbar-nav > li > a { font-size:1.2em;}
+/**********  icon 图表 ************/
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
+	color:@color !important;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus{
+	color:@color !important;
+}
+
+/*********　　waterfall 瀑布流 ***********/

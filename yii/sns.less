@@ -1,0 +1,54 @@
+/* CSS Document */
+
+@import 'common.less';
+@import 'header.less';
+/*********  用户模块 ******************/
+#user-wrap{ margin:20px auto; overflow:hidden; position:relative;
+	.author-bg{ .h(50px); .w(160px); .bg-c(#fff); .radius(5px 5px 0 0); position:absolute; top:4px; left:26px; z-index:29; 
+			     .box-shadow(0px 0px 4px #ccc);}
+	.author-bg-white{ .h(20px); .w(170px); .bg-c(#fff); position:absolute; top:44px; left:21px; z-index:30; }	
+		 
+	.pop-head{ position:absolute; .w(240px); .h(200px); top:4px; left:26px; z-index:30;
+		.author-pic{ .w(160px); .h(160px); position:relative; .left;
+			
+			.img{ .w(150px); .h(150px); .p(5px); .left; .o; .b;
+				img{ .w(150px); .h(150px);  .b;}
+			}
+		}
+		.sns-follow-fans{ .w(100%); .left; .h(60px);
+			a{ .w(78px); .t-c; .left; display:block; .b-r(1px solid #ccc); .size(12px); .h(40px); .m(5px 0 5px);
+				b{ .h-l(20px); .size(14px); }
+				.sub{ .h-l(20px); .t-c;}
+			}
+			a.followboards{ .b-r(none);}
+		}
+	}
+	.user-body-wrap{  .m(44px 4px 4px 4px);  .bg-c(#fff); .left; .o; .box-shadow(0px 0px 3px #ccc); position:relative;
+						.b-b(1px solid #ccc);font-family:Verdana, Geneva, sans-serif; .w(100%);
+		.user-body{ .w(100%); position:relative;
+			.user-info-wrap{ .left; .m-l(200px); .w(55%); .b-r(1px solid #ccc); position:relative; .p-r(10px); .h(170px); .m-b(5px);
+				.user-info{ .w(100%); .left; .h(150px);
+					.name-education{ display:block; .w(100%); .left; .h-l(40px); .m-t(10px);
+						.name{ .size(28px); color:#111;}
+						.education{ color:#555; .p-l(30px);}
+					}
+					.intro{ text-indent:2em; .left; .h(66px); .l(23px); color:#999; .p(5px 0); .w(100%); .o; }
+				}
+				.sns-letter{ position:absolute; .w(80px); .h-l(30px); top:10px; right:10px; .t-c; background-color:@color; 
+						color:#fff; cursor:pointer; .b(1px solid darken(@color,20%) );
+						.icon-letter{ .w(24px); .h(24px);  background:url(images/glyphicons-halflings-white.png) -72px 0 ; 
+							.left; .o; .m(8px -4px 0 8px);  }
+						span{.w(40px); .left;}
+				}
+				#report-user{ .w(24px); .h(24px); background:url(images/glyphicons-halflings.png) -312px -24px ; position:absolute; 
+					right:10px; bottom:0; cursor:pointer;}
+			}
+			.repin{.w(240px); .p(0 20px); .left; .o;.h(170px);
+				h4{ .h-l(40px); .m-t(10px); color:#666;}
+			}
+		}
+		.user-bar{ .w(100%); .left;  .h-l(48px); .b-t(1px solid #ededed);.b-b(1px solid #ededed); background:#fafafa;
+			a{ .p(0 20px); .b-r(1px solid #eaeaea); display:block; float:left; .size(14px);}
+		}
+	}
+}

@@ -1,0 +1,103 @@
+﻿@charset "utf-8";
+
+@import "common.less";
+@color:#1d7ad9;
+
+body {font: 微软雅黑, Arial, Helvetica,Verdana ;}
+html, body, h1, h2, h3, h4, h5, h6, fieldset, legend ,div,p{padding:0; margin:0;}
+ol,ul,ul li,dl,dl dd{ list-style:none;padding:0; margin:0;}
+
+.container {width: 980px;margin: 0 auto;}
+em,i{ font-style:normal;}
+a img { border: none;}
+a, a:link,a:active, a:focus {text-decoration:none; color:#999;}
+a:hover {text-decoration: none; color:#f60;}
+*:focus {outline: none;}
+.left{ float:left; text-align:left;}
+.right{ float:right; text-align:right;} 
+.opacity{  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=80);  opacity:0.8;}
+.ziti{font-family:微软雅黑,microsoft yahei, Arial, Helvetica,Verdana ; color:#666;}
+
+
+body{ .bg-c( lighten(@color,35%) ); }
+
+/*     类目 模块   */
+#category{ .m(10px auto); .w(1166px);  .p(12px); .bg-c(#fff);
+	h3{ .w(100%); .o; .left; .h-l(30px); font-weight:400; color:#333; .m-b(10px);
+		a{ .p-l(30px); .size(16px); color:#999; &:hover{ color:#f60; }}
+	}
+	dl{ .w(1166px); .o; .left;
+		dt{ .h-l(30px); .p(0 10px); .o; .left; cursor:pointer; background:#4E83FE; color:#fff; .radius(4px);}
+		dd{ .h-l(28px); .bg-c(#eee); color:#111; .p(0 10px); .radius(4px); cursor:pointer; .o; .left; .m(0 15px 10px 0); position:relative;
+			.b(1px solid #ccc);
+			em{ display:none;}
+		}
+		dd.dd-border{ .h-l(28px); .b(1px solid lighten(red,17%)); .p-r(40px);
+			em{ position:absolute; .w(30px); .h-l(30px); text-align:center; cursor:pointer; top:0; right:0; .bg-c( lighten(red,17%));
+			 color:#fff; .size(20px); display:block;  }
+		}
+		dd.page-dd-click{ background:#F7B1FE; .b(1px solid darken(#f7b1fe,10%) );}
+	}
+	#dt-cancle{ .m-l(15px); background:lighten(red,17%); color:#fff;}
+}
+
+#content{ .m(10px auto); .w(1190px);  .bg-c(#fff);
+	.title{ .bg-c(#eaeaea); .h-l(50px); .o; .w(100%);
+		input{ .h-l(30px); .p(0 5px); .m(9px 5px);  .b(none);.b(1px solid #fff); }
+			span{ .w(200px); color:#fff; .size(16px);  .bg-c( lighten(@color,15%) );
+				.o; .left;  text-align:center; display:block; .m-r(10px);
+			}
+			em{ color:#333; font-style:italic;
+				input{ .w(300px);}
+			}
+	}
+		
+	.row{ .p(12px); .w(1166px); .o; .left;  
+		ul{ .o; .left; text-align:center;
+			li{ .w(500px); .left; .o; .p(20px 0);  .m-l(40px);
+				.upload-img{ display:block; .o; .left;text-align:center;  .w(400px); .h-l(400px); .m(0 10px 10px 40px); .b(1px solid #ccc);
+					img{ .w(400px); .h(400px); }
+				}
+				.name,.link{ color:#111; .size(20px); .h(40px); .w(360px);  .o; .left; .m-l(40px);
+					em{ color:#f60; .w(60px); .o; .left;}
+					input{ .h-l(28px); .b(1px solid #ccc); .w(275px); .p(0 5px); .o; .left;}
+				}
+				.price{ .o; .left; .w(300px); .m-l(90px); .h-l(30px); 
+					span{ .w(140px); .o; .left; color:#f60; .m-l(10px);
+						em{ .w(70px); .o; .left;}
+						.ziti{ .w(50px); .b(1px solid #ccc); .m-l(5px); .o; .left; .p(0 5px); .h-l(28px);}
+					}
+				   span.ori{ text-decoration:line-through;}
+				}
+			}
+		}
+		ul.three{
+			li{ .w(333px);
+				.upload-img{ .w(300px); .h-l(300px); .m(0 0 10px 30px);
+					img{ .w(300px); .h(300px);}
+				}
+				.name,.link{.size(18px); .h(36px); .w(310px);   .m-l(20px);
+					em{  .w(65px);}
+					input{ .h-l(28px); .b(1px solid #ccc); .w(230px); }
+				}
+				.price{ .m-l(30px); }
+			}
+			
+		}
+	}
+}
+
+#sub{ .w(100px); .h-l(36px); .b(none); .bg-c(@color); color:#fff; text-align:center; cursor:pointer;
+	 position:absolute; left:600px; bottom:8px; font-family:微软雅黑,microsoft yahei, Arial, Helvetica,Verdana ;}
+
+/*     轮播    ***********************/
+#slides{ width:1190px; height:1052px; overflow:hidden; position:relative; margin:10px 0;}
+#slides .slides_container{width:1190px; height:1012px; overflow:hidden;}
+#slides .slides_container .row{ width:1190px; height:1012px; padding:0; margin:0;}
+
+#slides .pagination{.o; .left;  width:200px; height:30px; .m-l(420px); .m-b(10px);}
+#slides .pagination li { float:left; text-align:center;  width:40px; height:26px; line-height:26px; margin:0 0 0 10px;}
+#slides .pagination li a{ display:block; .bg-c(#ccc ); font-weight:700; color:#333; .b(1px solid @color);}
+#slides .pagination li a:hover{ color:@color; background:#fff;}
+#slides .pagination li.current a{ color:#fff; background:#fff; .bg-c(@color);}
+
